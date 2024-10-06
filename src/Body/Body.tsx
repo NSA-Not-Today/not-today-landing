@@ -63,8 +63,6 @@ const Body: React.FC = () => {
           imagePosition="left"
           image='/marketplace.gif'
         />
-        <HowItWorks />
-        <RegisterButton />
       </div>
     </Layout>
   );
