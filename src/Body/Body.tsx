@@ -1,9 +1,9 @@
 import React from 'react';
-import Layout from './components/Layout';
-import FeatureCard from './components/FeatureCard';
-import RegisterButton from './components/RegisterButton';
-import InfoSection from './components/InfoSection';
-import HowItWorks from './components/HowItWorks';
+import Layout from './Layout';
+import FeatureCard from './FeatureCard';
+import RegisterButton from './RegisterButton';
+import InfoSection from './InfoSection';
+import HowItWorks from './HowItWorks';
 
 const features = [
   {
@@ -20,7 +20,7 @@ const features = [
   }
 ];
 
-const HomePage: React.FC = () => {
+const Body: React.FC = () => {
   return (
     <Layout>
       <div className="flex flex-col items-center self-center mt-20 w-full max-w-[1123px] max-md:mt-10 max-md:max-w-full">
@@ -45,19 +45,17 @@ const HomePage: React.FC = () => {
           description="Recibe una notificación diaria con retos exclusivos. Tienes una hora para completarlos, ganar puntos y canjearlos en la tienda. ¡Compite con otros astroaddictos en la clasificación global!"
           imagePosition="left"
         />
-        <RegisterButton />
+        
         <InfoSection
           title="Enfréntate a retos galácticos cada día, gana puntos y escala posiciones en la tabla de clasificaciones"
           description="Tienes solo una hora para completar los retos del día y sumar la mayor cantidad de puntos posible. ¿Podrás llegar a la cima y ser coronado como el mayor astroadicto? ¡Demuestra que conoces el universo mejor que nadie y conquista el espacio!"
           imagePosition="right"
         />
-        <RegisterButton />
         <InfoSection
           title="Canjea tus Puntos y Llévate la Gloria"
           description="Cada vez que superes un reto galáctico, acumularás puntos que podrás canjear en nuestra tienda espacial por increíbles recompensas. Desde merchandising exclusivo hasta coleccionables únicos, ¡tu conocimiento del cosmos tiene premio!"
           imagePosition="left"
         />
-        <RegisterButton />
         <HowItWorks />
         <RegisterButton />
       </div>
@@ -65,4 +63,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default Body;
