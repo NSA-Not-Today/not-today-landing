@@ -13,7 +13,7 @@ const Button: React.FC<ButtonProps> = ({ children, variant }) => {
     };
 
     return (
-        <button className={`${baseClasses} ${variantClasses[variant]}`}>
+        <button onClick={() => window.location.href = 'https://app.nottoday.earth' } className={`${baseClasses} ${variantClasses[variant]}`}>
             {children}
         </button>
     );
