@@ -5,9 +5,10 @@ type InfoSectionProps = {
     title: string;
     description: string;
     imagePosition: 'left' | 'right';
+    image: string;
 };
 
-const InfoSection: React.FC<InfoSectionProps> = ({ title, description, imagePosition }) => {
+const InfoSection: React.FC<InfoSectionProps> = ({ title, description, imagePosition, image }) => {
     const contentOrder = imagePosition === 'left' ? 'order-2' : 'order-1';
     const imageOrder = imagePosition === 'left' ? 'order-1' : 'order-2';
     const buttonOrder = imagePosition === 'right' ? 'flex-row' : 'flex-row-reverse';
@@ -16,7 +17,7 @@ const InfoSection: React.FC<InfoSectionProps> = ({ title, description, imagePosi
             <section className="mt-28 ml-8 max-w-full w-[854px] max-md:mt-10">
                 <div className="flex gap-5 max-md:flex-col">
                     <div className={`flex flex-col w-[39%] max-md:ml-0 max-md:w-full ${imageOrder}`}>
-                        <div className="flex shrink-0 mx-auto mt-2 max-w-full rounded-xl bg-zinc-300 h-[197px] w-[282px] max-md:mt-10" />
+                        <img src={image} className="flex shrink-0 mx-auto object-contain mt-2 max-w-full rounded-xl h-[197px] w-[282px] max-md:mt-10" />
                     </div>
                     <div className={`flex flex-col ml-5 w-[61%] max-md:ml-0 max-md:w-full ${contentOrder}`}>
                         <div className="flex flex-col max-md:mt-10 max-md:max-w-full">

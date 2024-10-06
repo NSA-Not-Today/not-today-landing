@@ -8,15 +8,18 @@ import HowItWorks from './HowItWorks';
 const features = [
   {
     title: "Alertas divertidas",
-    description: "¡Cada alerta es una forma entretenida de aprender y estar informado! Recibe notificaciones sobre asteroides de forma divertida. Mantente al tanto de lo que sucede en el espacio, sin preocupaciones"
+    description: "¡Cada alerta es una forma entretenida de aprender y estar informado! Recibe notificaciones sobre asteroides de forma divertida. Mantente al tanto de lo que sucede en el espacio, sin preocupaciones",
+    image: "/iphone.gif"
   },
   {
     title: "Aprende jugando",
-    description: "Descubre el espacio mientras te diviertes. Responde quizzes, completa desafíos y gana puntos que podrás canjear por recompensas"
+    description: "Descubre el espacio mientras te diviertes. Responde quizzes, completa desafíos y gana puntos que podrás canjear por recompensas",
+    image: "/quiz.gif"
   },
   {
     title: "Canjea premios reales",
-    description: "Acumula puntos mientras aprendes y participa en divertidos juegos. Cuando hayas reunido suficientes puntos, podrás canjearlos por increíbles premios reales"
+    description: "Acumula puntos mientras aprendes y participa en divertidos juegos. Cuando hayas reunido suficientes puntos, podrás canjearlos por increíbles premios reales",
+    image: "/marketplace.gif"
   }
 ];
 
@@ -27,7 +30,7 @@ const Body: React.FC = () => {
         <div className="self-stretch max-md:max-w-full">
           <div className="flex gap-5 max-md:flex-col">
             {features.map((feature, index) => (
-              <FeatureCard key={index} title={feature.title} description={feature.description} />
+              <FeatureCard key={index} title={feature.title} description={feature.description} image={feature.image} />
             ))}
           </div>
         </div>
@@ -44,17 +47,21 @@ const Body: React.FC = () => {
           title="Todos los días una notificación divertida que te informa sobre asteroides y te invita a jugar y aprender."
           description="Recibe una notificación diaria con retos exclusivos. Tienes una hora para completarlos, ganar puntos y canjearlos en la tienda. ¡Compite con otros astroaddictos en la clasificación global!"
           imagePosition="left"
+          image='/iphone.gif'
         />
-        
+
         <InfoSection
           title="Enfréntate a retos galácticos cada día, gana puntos y escala posiciones en la tabla de clasificaciones"
           description="Tienes solo una hora para completar los retos del día y sumar la mayor cantidad de puntos posible. ¿Podrás llegar a la cima y ser coronado como el mayor astroadicto? ¡Demuestra que conoces el universo mejor que nadie y conquista el espacio!"
           imagePosition="right"
+          image='/quiz.gif'
+
         />
         <InfoSection
           title="Canjea tus Puntos y Llévate la Gloria"
           description="Cada vez que superes un reto galáctico, acumularás puntos que podrás canjear en nuestra tienda espacial por increíbles recompensas. Desde merchandising exclusivo hasta coleccionables únicos, ¡tu conocimiento del cosmos tiene premio!"
           imagePosition="left"
+          image='/marketplace.gif'
         />
         <HowItWorks />
         <RegisterButton />
